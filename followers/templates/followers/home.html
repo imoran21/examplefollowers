@@ -1,0 +1,36 @@
+<br><br>
+<!DOCTYPE HTML>
+
+
+<head></head>
+
+
+<body> {% block content %}
+       
+
+
+
+<form action="." method="post">{% csrf_token %}
+  Twitter Handle <br>
+  <input type="text" name="handle" value="">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<br>
+
+{% if followers %}
+
+{{handle}} followers: {{followers}}
+
+
+{% endif %}
+
+
+
+
+
+        {% endblock %}
+
+
+        </body>
